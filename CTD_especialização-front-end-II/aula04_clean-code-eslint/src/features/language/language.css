@@ -1,0 +1,22 @@
+.language {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 2px 0;
+}
+.language-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #17589f;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #17589f;
+  margin-right: 10px;
+}
+
+.language-button.active {
+  color: white;
+  background-color: #17589f;
+}

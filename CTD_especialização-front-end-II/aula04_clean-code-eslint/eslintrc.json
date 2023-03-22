@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "tsconfigRootDir": "./src"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "indent": ["error", 1],
+    "function-paren-newline": ["off"],
+    "lines-between-class-members": ["erro", "always"],
+    "one-var-declaration-per-line": ["erro", "always"],
+    "no-else-return": ["warn"],
+    "consistent-return": ["warn"],
+    "no-return-assign": ["warn"],
+    "no-restricted-imports": ["erro", { "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"] }],
+    "no-unused-expressions": ["warn"],
+    "no-nested-ternary": ["warn"],
+    "arrow-body-style": ["erro", "as-needed"],
+    "max-len": [
+      "warn",
+      {
+        "code": 180,
+        "ignorePattern": "d=\"([\\s\\S]*?)\""
+      }
+    ],
+    "react/jsx-one-expression-per-line": ["off"]
+  }
+}
